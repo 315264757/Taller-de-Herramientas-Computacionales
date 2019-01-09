@@ -1,0 +1,84 @@
+    1  man touch
+    2  touch /tmp/algo
+    3  ls -l /tmp/algo
+    4  chmod 700/tmp/algo
+    5  chmod 700 /tmp/algo
+    6  ls -l/tmp/algo
+    7  ls -l /tmp/algo
+    8  PATH
+    9  uname -a 
+   10  /bin/bash
+   11  ls-l /bin/bash
+   12  ls -l /bin/bash
+   13  echo
+   14  PATH
+   15  set
+   16  pwd
+   17  cd /pwd
+   18  ./algo
+   19  :/tmp/algo
+   20  python
+   21  touch /tmp/algo
+   22   ls -l /tmp/algo
+   23  pwd
+   24  cd /tmp
+   25  set
+   26  git in it
+   27  git init
+   28  cd
+   29  git config --global user.mail "hectorchaparro@ciencias.unam.mx"
+   30  git config --global user.name "315264757"
+   31  git init
+   32  cd Documentos/
+   33  touch /thc/Taller-de-Herramientas-Computacionales
+   34  git clone https://github.com/315264757/Taller-de-Herramientas-Computacionales.git
+   35  cd Taller-de-Herramientas-Computacionales
+   36  touch /helloworld
+   37  mkdir
+   38  mk dir
+   39  mkdir hello-world
+   40  cd hello-world
+   41  git status
+   42  git add *
+   43  git config
+   44  git commit
+   45  git config --global user.email "hectorchaparro@ciencias.unam.mx"
+   46  git config --global user.name "315264757"
+   47  git commit
+   48  git push
+   49  git commit
+   50  git config --global user.email "hectorchaparro@ciencias.unam.mx"
+   51  git config --global user.name "315264757"
+   52  git commit
+   53  git status
+   54  git add *
+   55  git config --global user.email "hectorchaparro@ciencias.unam.mx"
+   56  git config --global user.name "315264757"
+   57  git commit
+   58  README.md
+   59  git
+   60  cd documentos
+   61  cd Documentos
+   62  ls
+   63  cd Taller-de-Herramientas-Computacionales
+   64  ls
+   65  README.md
+   66  vi README.md
+   67  cat README.md
+   68  man cat
+   69  git add *
+   70  git config --global user.name "315264757"
+   71  git config --global user.email "hectorchaparro@ciencias.unam.mx"
+   72  git commit
+   73  git push
+   74  ls Clases/
+   75  mkdir -p Clases/Latex
+   76  mkdir -p Clases/Programas
+   77  man ls
+   78  ls Clases
+   79  vi Clases/Latex/03.txt
+   80  git add *
+   81  git commit
+   82  git commit -m "Se modifico el README.md y se creo el archivo 03 en el directorio Latex dentro de clases"
+   83  git push
+   84  history > Clases/Latex/Comandos03.txt
