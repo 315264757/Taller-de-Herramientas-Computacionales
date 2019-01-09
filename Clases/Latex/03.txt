@@ -1,0 +1,9 @@
+Pasos para crear un repositorio en Linux
+1.- Creamos un directorio (una carpeta que llamamos thc) y nos paramos dentro de la carpeta
+2.- Usamos el comando git init para inicializar  el repositorio de tipo git desde el bash
+3-- Para vinvularlo con mi cuenta en github use el comando clone git https:....
+4.- Cree un archivo para guardarlo en el repositorioy despues use el comando git add * para agregarlo
+5.- Para subirlo use el comando git config --global user.name "mi nombre" y lko mismo con email "mi email"
+6.- Agregue un comentrio con git commit y termine usando :wq
+7.- Para finalizar use git push
+
