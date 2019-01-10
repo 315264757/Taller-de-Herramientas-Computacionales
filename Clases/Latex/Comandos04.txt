@@ -1,0 +1,38 @@
+    1  cd Documentos
+    2  cd Documents
+    3  ls
+    4  cd
+    5  cd Home
+    6  cd Taller-de-Herramientas-Computacionales
+    7  cd Clases
+    8  ls
+    9  mkdir Programs
+   10  cd Programs
+   11  cd
+   12  /etc/locale.config
+   13  sudo yum install system-config-keyboard
+   14  system-config-keyboard-base.x86_64
+   15  system-config-keyboard-base.x86_64 0:1.3.1-14fc19
+   16  system-config-keyboard
+   17  sudo setup
+   18  localectl status
+   19  sudo setup
+   20  localectl status
+   21  cd THC
+   22  cd Documents
+   23  cd THC
+   24  rm Recorrido
+   25  rm -m Recorrido
+   26  rm --jhelp
+   27  rm help
+   28  rm --help
+   29  rm Recorrido
+   30  cd Clases/Latex
+   31  ls
+   32  history > Clases/Latex/Comandos04.txt
+   33  cd Documents
+   34  cd
+   35  cd THC
+   36  cd Documents
+   37  cd THC
+   38  history > Clases/Latex/Comandos04.txt
