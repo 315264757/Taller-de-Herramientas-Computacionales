@@ -1,0 +1,39 @@
+\documentclass[letterpaper, 12pt, oneside]{article} 
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\graphicspath{{Documents/THC/Clases/Latex/Imagenes/}}
+
+\title{\Huge{Taller de Herramientas Computacionales}}
+\author{Hector Chaparro Reza}
+\date{Enero 14, 2019}
+
+\begin{document}
+	\maketitle
+	\it Este es la segunda bit\'acora del curso intersemestral de Taller de Herramientas Computacionales, con la fecha (08/01/2019). Aqui resumir\'e lo m\'as relevante de la teor\'ia. Los problemas y las soluciones que surgieron a lo largo de la pr\'actca ser\'an comentadas en el cuerpo de la bit\'acora. 
+	\newpage
+	
+	\title{\Huge{Git}}\\
+	
+	\textbf{Github como herramienta de trabajo}\\
+	
+	\begin{enumerate}
+		\item {Instalaci\'on y uso}
+		\begin{enumerate}
+			\item Instalaci\'on\\
+			Para la instalaci\'on utilizamos el comando "sudo dnf install git" para fedora, lo que hace sudo es dar permiso de administrado e instalar el softwae en el sistema root. Git es un programa que permite subir archivos a la red de diferentes codigos fuente con eficiencia y confiabilidad. Posteriormente creamos nuestra cuenta en github.com que es una p\'agina para usar el software.\\
+			
+			\item Herramienta:\\
+			\begin{enumerate}
+			\item Creando un repositorio:\\
+			Al crear mi cuenta no ten\'ia idea de como funcionaba github, en otras clases los profesores sub\'ian archivos ah\'i pero aqui me enseñaron como hacer eso utilizando la bash de Linux para esto creamos un directorio con el comando mkdir y para inicializarlo como un repositorio de git utilizamos el comando git config --global user.name "315264757" y git config --global user.email "hectorchaparro@ciencias.unam.mx" para especificar que queremos  vincularlo con nuestra cuenta en el servidor de git y despu\'es usamos el comando git init el cual inicializa el repositorio creando un archivo .git dentro de el directorio (est\'a es la diferencia entre un repositorio y un directorio) al hacer esto en clase, la terminal nos mandaba un error esto pas\'o por que a la hora de hacer la configuraci\'on de la cuenta escribimos user.mail y era email. \\
+			
+			\item Creando un archivo de texto plano:\\
+			Creamos un archivo de texto plano llamado README.md con el comando cat, dentro del archivo de texto en el bash usamos el editor vi donde pod\'iamos escribimos algo y luego lo terminamos con el comando shwift+: para poder usar el comando wq que es write y quit para salvar lo que hab\'iamos escrito.\\
+			
+			\item Subir archivos a la red:\\
+			Al finalizar la sesi\'on añadimos los archivos con el comandp git add * y lo comentamos con git commit, esto nos llevo de nuevo al editor vi pero yo sent\'i que era mejor usar git commit -m para hacer un comentario r\'apido. Despu\'es usamos el comando git push que sube la informaci\'on a internet y checamos los cambios con git status que muestra el estado del repositorio.
+			\end{enumerate}
+		\end{enumerate}
+	\end{enumerate}
+\end{document}
