@@ -14,4 +14,4 @@ t = 31557.600           # Tiempo que tarda la tierra en dar la  vuelta al sol en
 M = 4*(pi**2)*(r**3)/G*t**2 # Masa del sol
 print M
 
-# El programa es adaptable a el calculo de la masa de cualquier astro, considerando que sabemos la distancia que hay entre ellos y el tiempo en que el objeto con menor masa le da la vuelta al mayor
+def 
