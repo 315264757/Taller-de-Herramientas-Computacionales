@@ -1,0 +1,103 @@
+\documentclass[letterpaper, 12pt, oneside]{article} 
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\graphicspath{{Documents/THC/Clases/Latex/Imagenes/}}
+\usepackage{amssymb}
+
+\title{\Huge{Taller de Herramientas Computacionales}}
+\author{Hector Chaparro Reza}
+\date{Enero 15, 2019}
+
+\begin{document}
+	\maketitle
+	\it Esta es la septima bit\'acora del curso intersemestral de Taller de Herramientas Computacionales, con la fecha (15/01/2019). Aqui resumir\'e lo m\'as relevante de la teor\'ia. Los problemas y las soluciones que surgieron a lo largo de la pr\'actca ser\'an comentadas en el cuerpo de la bit\'acora.\\
+	\newpage
+	
+	
+	\title{\Huge{Resolviendo problemas y creando scripts}}\\
+	
+	\textbf{Definir, analizar, delimitar y resolver un problema}\\
+	
+	\begin{enumerate}
+		\item {Problemas, problemas y más problemas... Es más, si ya no ves un problema tienes un problema}
+		\begin{enumerate}
+			\item Diana\\
+			En la clase pasada había quedado pendiente el codigo con condicionales para separar un plano en cuadrantes y que al escoger ciertas coordenadas (x,y) nos arroja una puntuación sólo que el profesor Luis agregó un grado de dificultad al trazar un circulo inscrito en el cuadrante del centro. tuve un poco de dificultad al hacer el codigo ya que querìa hacer algo demasiado complicado usando lo que aprendì en mis cursos de geometría analítica intentando usar la ecuación del círculo de diferentes formas, tambièn intente con el area del circulo y al final la respuesta era lo más sencillo que era usar el perimetro... A continuación el codigo. \\
+			
+			\newpage
+			\begin{verbatim}
+			import math
+			
+			def diana(x,y):
+			if x<=5 and ((y<=10 or y>30) or (y<=10 or y>30)):
+			return(3)
+			elif 5<x<=25 and (y<=10 or y>30):
+			return(7)
+			elif 10<y<=30 and (x<=5 or x>25):
+			return(5)
+			elif (x,y)>2*math.pi*r and (15,20):
+			return(10)
+			else:
+			return(100)
+			
+			#Intentos fallidos
+			
+			#   elif (x-15)**2+(y-20)**2:
+			#       return (10)
+			#   elif (15.20) with math.pi*10**2:
+			#       return(10)
+			#   elif (x**2+y**2+(-30)*x+(-40)*y+525) with x=15 and y=20:
+			#      return (10) 
+			\end{verbatim}
+			
+			\item Ejercicio:\\
+			Vimos un ejemplo sobre la sucecion de Ulam en la cual formamos equipos para desarrollar el algoritmo adecuado para solucionar el problema y tristemente fallamos ya que en ese momento no tuvimos presente la lección más importante que era analizar primero el problema y la recomendación máxima, escribir todas las ideas y procesos que se nos ocurriesen. Comenzamos a codificar e intetnamos meter un condicional dentro de un bucle y luego ya np sabíamos que hacìamos, al final la lección importante fue divide y encerás. Haciendo un ciclo y un condicional por separado salía todo. \\
+			
+			\newpage
+			\begin{verbatim}
+			#def paridad(x):
+			#    if x/2 == d and 2*d == x :
+			#        return(si)
+			#    else:
+			#        return(no)
+			
+			
+			#def sucULAM(x):
+			#    a = x/2
+			#    b = 3*x+1
+			#    while :
+			#        if paridad(si):
+			#            print(a)
+			#        else :
+			#            print(b)
+			
+			
+			
+			def ulam(x):
+			if(x/2)*2 == 0: 
+			return x/2
+			else:
+			return 3*x + 1
+			#el problema lo dividimos en partes para ir splocuinando eficazmente
+			
+			def suc(x):
+			while x>1: #while x>1: (tambien asi se puede)
+			x=ulam(x)
+			print x
+			
+			print ulam(52)
+			print suc(17)
+			print suc(26)
+			print suc(52)
+			print suc(1024)
+			print suc(72)
+			print suc(1524927)
+			print suc(2)
+			#al final ponemos los dos print para los resultados de las funciones
+			\end{verbatim}
+			\newpage
+			En este punto comenzamos a hacer un script por cada programa que creamos,esto es que a parte del programa en el cual se encuentran los metodos, funciones y en su defecto parámetros también teníamos que crear otro programa que llamara a esos metodos dentro de un modulo y asi poder hacer un menú facil de usar por medio de inputs y print. Al final quedo de tarea hacer 10 problemas mencionados en clase y comentados posteriormente. 
+		\end{enumerate}
+	\end{enumerate}
+\end{document}

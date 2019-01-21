@@ -1,0 +1,59 @@
+\documentclass[letterpaper, 12pt, oneside]{article} 
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\graphicspath{{Documents/THC/Clases/Latex/Imagenes/}}
+\usepackage{amssymb}
+
+\title{\Huge{Taller de Herramientas Computacionales}}
+\author{Hector Chaparro Reza}
+\date{Enero 16, 2019}
+
+\begin{document}
+	\maketitle
+	\it Esta es la octava bit\'acora del curso intersemestral de Taller de Herramientas Computacionales, con la fecha (16/01/2019). Aqui resumir\'e lo m\'as relevante de la teor\'ia. Los problemas y las soluciones que surgieron a lo largo de la pr\'actca ser\'an comentadas en el cuerpo de la bit\'acora.\\
+	\newpage
+	
+	
+	\title{\Huge{Comandos bash para un trabajo màs eficiente y bueno problemas, problemas, problemas}}\\
+	
+	\begin{enumerate}
+		\item {Bash}
+		\begin{enumerate}
+			\item M\'odulos\\
+			Con lo aprendido la clase anterior sobre los scrpits surgieron muchos problemas y dudas en la clase sobre como ejecutarlos correctaente ya que a algunos compañeros no les abrían los programas. Viendo esto el profesor aclaró que teníamos que guardar el módulo en el que se encontrarían nuestros metódos en la misma ubicación que el script. Tambien aprendimos a ejecutar estos programas de python desde la bash, a usar diferentes ventanas o más de un idle de python. Tambien jugamos un poco con el shell de python declarando variable y asignando parametros de diferentes formas, uno muy característico de py es el print multilinea. También hicimos conversion de tipos a la hora de imprimir un resultado para que lo vieramos según nuestras necesidades. \\
+			
+			\item Problemas:\\
+			El día anterior tuve problemas con mi computadora, la cual se bloqueo debido a que se apago por falta de pila, lo cual fue todo un relajo ya que no pude codificar los problemas que dejaron de tarea pero hice el analisis, y eso me ayudo a no perder el hilo de la clase. El punto es que el profesor me ayudo a solucionarlo y al principio creìamos que fue porque estuve descargando algunos programas.  \\
+			
+			\begin{verbatim}
+			#!/usr/bin/python2.7
+			# -*+ coding: utf-8 -*-
+			
+			def mcd(a,b):
+			r = a%b
+			while r != 0:
+			a = b
+			b = r
+			r = a%b
+			return(b)
+			\end{verbatim}
+		
+			
+			Lo anterior fue el ejemplo de del problema 1 de como calcular el máximo común divisor usando el cilco while, a la hora de estár  haciendo mi analisis acertadamente me base en el algoritmo de euclides pero no tenìa idea de como implementar el ciclo while y una cosa con la que no contaba es que con el signo de porcentaje podemos usar la función módulo de para ahorrarnos trabajo. Tristemente como el profesor dio el ejemplo ahora había que hacerle actualización sin poder usar el signo de porcentaje y esto fue lo que me salió después de muchos intentos.
+				
+			\begin{verbatim}
+			def macomu(a,b):
+			r = a-b
+			while r>b:
+			a = r
+			r = a-b
+			while r != 0:
+			a = b
+			b = r
+			r = a-b
+			return(b)
+			\end{verbatim}
+		\end{enumerate}
+	\end{enumerate}
+\end{document}

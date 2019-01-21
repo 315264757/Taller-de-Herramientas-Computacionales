@@ -1,0 +1,83 @@
+\documentclass[letterpaper, 12pt, oneside]{article} 
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\graphicspath{{Documents/THC/Clases/Latex/Imagenes/}}
+\usepackage{amssymb}
+
+\title{\Huge{Taller de Herramientas Computacionales}}
+\author{Hector Chaparro Reza}
+\date{Enero 18, 2019}
+
+\begin{document}
+	\maketitle
+	\it Esta es la décima bit\'acora del curso intersemestral de Taller de Herramientas Computacionales, con la fecha (18/01/2019). Aqui resumir\'e lo m\'as relevante de la teor\'ia. Los problemas y las soluciones que surgieron a lo largo de la pr\'actca ser\'an comentadas en el cuerpo de la bit\'acora.\\
+	\newpage
+	
+	
+	\title{\Huge{Proproproproblemas, uso adecuado de booleanos y listas}}\\
+	
+	\begin{enumerate}
+		\item {Problema 2}
+		\begin{enumerate}
+			\item De centigrados a farenheit con listas\\
+			Hicimos un ejemplo del problema 3 de la conversion de grados centigrados a farenheit, para esto primero estuvimos en el shell un buen rato probando como crear listas, agregar elementos a ellas, quitarlos, reordenarlos, meter listas en listas, poner elementos de una lista en otra, csmbiar el tipo de elementos que tienen e implementar un ciclo nuevo, el for. Despuès retomamos el ejemplo para ir agrgando diferendtes valores de modo que al ejecutar el programa nos quede una lista ordenada y facil de entender. Este fué el codigo:\\
+			
+			\begin{verbatim}
+			# -*- coding: utf-8 -*-
+			S='_|?|_|?|_|?|_|?|_|?|_|?|_|?|'
+			C = -20
+			iC = 5
+			while C <= 40:
+			F = (9.0/5)*C + 32
+			print C, F
+			#C = C + iC
+			C += iC
+			print S
+			
+			#for each esta mas cool
+			gradosC = [-20, -15, -10, -5, 0, 5, 10 ,15, 20]
+			print '     C   F'
+			for grado in gradosC:
+			F = (9.0/5)*grado + 32
+			print '%5d %5.1f' % (grado, F)
+			print S
+			
+			indice = 0
+			print '     C   F'
+			while indice < len(gradosC):
+			C = gradosC[indice]
+			F = (9.0/5)*C + 32
+			# print C, F
+			print '%5d %5.1f' % (C,F)
+			indice+=1
+			print S
+			#recorren elementos de una lista y van procesando los valores uno al vez
+			
+			gradosC = []
+			for C in range(-20,45,5):
+			gradosC.append(C)
+			print gradosC
+			print S
+			
+			gradosC = []
+			for i in range(0,31):
+			C = -20 + i*2.5
+			gradosC.append(C)
+			print gradosC
+			print S
+			
+			#gradosC=[-20]
+			#L=[-20]
+			#while L[len(L)-1] != 30:
+			#    L.append(L[len(L)-1]+2.5)
+			\end{verbatim}
+			
+			Como podemos observar es un codigo mejor estucturado yy que usa aducuadamente las funciones que python como lenguaje de alto nivel tiene que ofrecer para que programemos de mannera optima. Aunque hayamos descubierto esta herramienta aun asi se diseño un ciclo while para resolver el problema de la forma más básica posible.\\
+			
+			Para este punto sólo nos dedicamos a jugar con la manera de representar los datos de las listas y de evaluar una cantidad de valores con el range.
+			
+		
+		\end{enumerate}
+	\end{enumerate}
+\end{document}

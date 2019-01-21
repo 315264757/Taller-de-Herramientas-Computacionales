@@ -1,0 +1,73 @@
+\documentclass[letterpaper, 12pt, oneside]{article} 
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\graphicspath{{Documents/THC/Clases/Latex/Imagenes/}}
+\usepackage{amssymb}
+
+\title{\Huge{Taller de Herramientas Computacionales}}
+\author{Hector Chaparro Reza}
+\date{Enero 17, 2019}
+
+\begin{document}
+	\maketitle
+	\it Esta es la novena bit\'acora del curso intersemestral de Taller de Herramientas Computacionales, con la fecha (17/01/2019). Aqui resumir\'e lo m\'as relevante de la teor\'ia. Los problemas y las soluciones que surgieron a lo largo de la pr\'actca ser\'an comentadas en el cuerpo de la bit\'acora.\\
+	\newpage
+	
+	
+	\title{\Huge{Ya sabes que tuvimos... Exacto, más problemas}}\\
+
+	
+	\begin{enumerate}
+		\item {Shell y booleans}
+		\begin{enumerate}
+			\item Shell\\
+			Comenzamos a usar valores de verdad  con los booleanos, verdadero o falso para indicar un si o un no como confirmación de algo que podremos usar para reafinar nuestros programas pero por el momento sólo hicimos ejemplos con while (while boool(l) == True) y en el shell asignamos parametros y preguntamos si realmente lo eran\\
+			
+			\item 08:\\
+			Hicimos un programa para aplicar la conversiòn de tipos y diferentes asignaciones de parámetros el cual se ve asi... \\
+			
+			\begin{verbatim}
+			#!/usr/bin/python2.7
+			# -*+ coding: utf-8 -*-
+			#""" se refiere a hacer una cadena y a cerrarla
+			print "Héctor Chaparro Reza"+"\n315264757"+"\nTaller de Herramientas Computacionales" 
+			
+			x = 10.5;y = 1.0/3;z = 15.3
+			#x,y,z=10.5,1.0/3,15.3 modo de asignar variables caracteristica d e python
+			H = """
+			El punto en R3 es:
+			(x,y,z)=(%.2f,%g,%G)
+			""" % (x,y,z)
+			print H
+			
+			
+			#probar sin el parentesis en linea abajo de El punto en R3 es:
+			#poner etiqueta luego dos puntos y la letra de como quiero que me lo muestre (flotante)
+			
+			G="""
+			El punto en R3 es:
+			(x,y,z)={laX:.2f},{laY:g},{laZ:G} 
+			""".format(laX=x,laY=y,laZ=z)
+			print G
+			
+			#Conversion de tipos
+			print 'Algo ' + str(x)
+			
+			print float(str(x))*3
+			#print 'x es de tipo %s' % type(x)._name_
+			print type(5)
+			print type('5')
+			
+			print "Coordenadas de la flecha\n"
+			x=input("¿Cual es la abcisa?\n")
+			y=input("¿Cual es la ordenada?\n")
+			\end{verbatim}
+			\newpage
+			
+			
+			
+			Cabe mencionar que está vez la clase fue algo diferente ya que lo visto con el profesot en python fue al final de la clase ya que quedaban muchas dudas de latex asi que desde el inicio estuvimos viendo como meter diferentes funciones y y ecuaciones matemáticas lo cual yo creo que es lo mejor que nos pudo haber dado junto con el comando para hacer arreglos de paquetes y también como meter un  codigo con verbatim de latex.
+		\end{enumerate}
+	\end{enumerate}
+\end{document}

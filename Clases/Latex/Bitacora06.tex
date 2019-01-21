@@ -3,45 +3,80 @@
 \usepackage{graphicx}
 \usepackage{xcolor}
 \graphicspath{{Documents/THC/Clases/Latex/Imagenes/}}
+\usepackage{amssymb}
 
 \title{\Huge{Taller de Herramientas Computacionales}}
 \author{Hector Chaparro Reza}
-\date{Enero 15, 2019}
+\date{Enero 14, 2019}
 
 \begin{document}
 	\maketitle
-	\it Esta es la sexta bit\'acora del curso intersemestral de Taller de Herramientas Computacionales, con la fecha (11/01/2019). Aqui resumir\'e lo m\'as relevante de la teor\'ia. Los problemas y las soluciones que surgieron a lo largo de la pr\'actca ser\'an comentadas en el cuerpo de la bit\'acora.\\
+	\it Esta es la sexta bit\'acora del curso intersemestral de Taller de Herramientas Computacionales, con la fecha (14/01/2019). Aqui resumir\'e lo m\'as relevante de la teor\'ia. Los problemas y las soluciones que surgieron a lo largo de la pr\'actca ser\'an comentadas en el cuerpo de la bit\'acora.\\
 	\newpage
 	
 	
 	\title{\Huge{Resolviendo problemas}}\\
 	
-	\textbf{Definir, analizar, delimitar y resolver un problema}\\
+	\textbf{Nuevos comandos. Definir, analizar, delimitar y resolver un problema}\\
 	
 	\begin{enumerate}
-		\item {Retomando el ejemplo de la pelota}
+		\item {Problemas, problemas, problemas...}
 		\begin{enumerate}
 			\item M\'odulos\\
-			Anteriormente hab\'iamos programado un script que que calculaba la posici\'on de una pelota dada la velocidad inicial, el tiempo que tarda en caer al suelo y la fuerza de gravedad que la tierra ejerce sobre otros cuerpos. Pero que tal que queremos refinar nuestro programa para que al ejecutarlo en la terminal para que solo tengamos que ingresar los valores para que calcule cualquier posici'on en un tiro vertical. usamos el comando def seguido del nombre que utilizaremos para llamar al m\'odulo y despu\'es un parentesis en el cual ingresaremos los valores que ser\'an sustituidos en la ecuaci\'on que se nos de la gana (estos valores deben ir separados por comas). Al final necesitamos que la ecuaci\'on nos regrese el valor calculado y utilizamos el comando return()\\
+			Continuamos hablando de la manera en la que se solucionan los problemas y el profesor planteo el ejercicio de definir la raiz cuadrada con aproximaciones de nuevo y recalcó que era más facil primero hacer un analisis y escribir el problema y después codificarlo. Continuamos con algunos ejemplos de operaciones en el shell de python importando el paquete math y una leccion aqui fue que siempre que hagamos un import de una biblioteca y queramos usar una de sus funciones tenemos que usar la estructura "objeto.metodo(variable)". \\
 			
-			\item Imprime resultados:\\
-			A la hora de correr el m\'odulo en la terminal de python habremos importado la ecuaci\'on y solo bastar\'a llamarlo y darle valores para que haga el c\'alculo pero para esto necesitamos que dentro del m\'odulo exista un print que especifique como es que nos va arrojar el resultado, con muchos decimales para una mayor precisi\'on o s\'olo un entero para tener una aproximaci\'on. para esto usamos el signo de porcentaje y las letras r,g,e minusculas y maysculas como se ve en el recuento del ejercicio que hicimos para poder identificar como imprime cada letra. \\
+			\item Condicional y ciclo:\\
+			Llego la hora de empezar a afinar la herramienta que tenemos para resolver problemas en python, a la hora de hacer la tarea de la creación del módulo para calcular la posicion de una pelota logramos resolver el problema pero con limitaciones. Con el condicional if para hacer un módulo que nos permitiera aplicar el valor absoluto a cualquier nùmero y despues usamos el bucle ciclo while para definir correctamente el problema del cálculo de raices cuadradas por medio de aproximaciones las cuales dejamos con unos 5 o 6 decimales de precisión si no mal recuerdo con el porcentajeg en el print. A continuación dejare el codigo para que se pueda entender mejor lo que hicimos.\\
 			
 			
 			
-			-*- coding: utf-8 -*-\\
-			v0 = 34\\
-			g = 9.81\\
-			t = 4.3\\
-			y = v0*t - 1.0/2*g*t**2\\
-			print 'La posicion de la pelota en el t=porcentajeE es porcentaje10.7fnporcentajef' porcentaje (t,y,t)\\
-			def posicion(t,v0):\\
-			y = v0*t - 1.0/2*g*t**2\\
-			return(y)\\
+			\newpage
+			\begin{verbatim}
+			def vAbsoluto(x):
+			if x>=0:
+			return(x)
+			else:
+			return(-x)
 			
-			Al finalizar el ejercicio y refinal el programa de la pelota se qued\'o de tarea refinal el programa que hab\'iamos hecho con nuestro problema de f\'isica.
+			def raiz(x):
+			h=x
+			b=1.0
+			e=0.0001
+			while vAbsoluto(b-h)>e:
+			h = (b+h)/2
+			b = x/h
+			return(b)
+			
+			print raiz(1.0)
+			print raiz(4.0)
+			print raiz(9.0)
+			print raiz(9.1)
+			print raiz(1000000.0)
+			
+			def raiz1(x):
+			h=x
+			b=1.0
+			e=0.0001
+			i=0 #cuenta el numero de veces que se ejecuta el ciclo
+			while vAbsoluto(b-h)>e:
+			i=i+1
+			h = (b+h)/2
+			b = x/h
+			print "El ciclo se repitio %d veces"% (i)
+			return(b)
+			
+			print raiz1(1.0)
+			print raiz1(4.0)
+			print raiz1(9.0)
+			print raiz1(9.1)
+			print raiz1(1000000.0)
+			\end{verbatim}
+			
+			\newpage
+			
+			Al finalizar el ejercicio practicamos los condicionales con un ejercicio llamado la Diana que era separar por cuadrantes un plano y especificar que en ciertos lugares habría mas puntos y quedo de tarea mejorarlo.
 				
-			Al final la ayudante Karla nos enseño los comandos b\'asicos para escribir en latex, coomo crear un documento, usar paquetes y practicamente todo lo que use para escribir esta bitacoras. Aun no puedo resolver el problema de las imagenes, yo supongo que estoy metiendo mal el path pero no se.
+			Al final la ayudante Karla nos enseño los comandos para escribir en latex, y pudo resolver el problema de las imagenes cambiandolas al home.
 		\end{enumerate}
 	\end{enumerate}
 \end{document}

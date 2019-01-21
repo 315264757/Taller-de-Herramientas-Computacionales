@@ -17,16 +17,19 @@
 
         
 def ulam(x):
-    if(x/2)*2 == 0: 
+    if x%2==0:  #if(x/2)*2 == 0:
+    
         return x/2
     else:
-        return 3*x + 1
+        return 3*x+1
 #el problema lo dividimos en partes para ir splocuinando eficazmente
 
 def suc(x):
-    while x>1: #while x>1: (tambien asi se puede)
+    i=0
+    while x!=1: #while x>1: (tambien asi se puede)
         x=ulam(x)
-        print x
+        i=i+1
+    return i #print x sin el i=0 y el i=i+1
 
 print ulam(52)
 print suc(17)
