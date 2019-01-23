@@ -1,0 +1,19 @@
+\begin{verbatim}
+	G="""
+	El punto en R3 es:
+	(x,y,z)={laX:.2f},{laY:g},{laZ:G}
+	""".format(laX=x,laY=y,laZ=z)
+	print G
+
+	#Conversion de tipos
+	print 'Algo ' + str(x)
+
+	print float(str(x))*3
+	#print 'x es de tipo %s' % type(x)._name_
+	print type(5)
+	print type('5')
+
+	print "Coordenadas de la flecha\n"
+	x=input("¿Cual es la abcisa?\n")
+	y=input("¿Cual es la ordenada?\n")
+	\end{verbatim}

@@ -1,0 +1,40 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\graphicspath{Pictures/}
+\usepackage[utf8]{inputenc}
+%\usepackage[spanish]{babel}
+\usetheme{Berkeley}
+
+\title{Taller de Herramientas Computacionales}
+\author{Héctor Chaparro Reza}
+\date{22/01/2019}
+
+\begin{document}
+	\begin{frame}
+	\frametitle{Presentación}
+	%\includegraphics[scale=]{Pictures/1.png}
+\end{frame}
+
+\begin{frame}[fragile]
+	\begin{verbatim}
+	G="""
+	El punto en R3 es:
+	(x,y,z)={laX:.2f},{laY:g},{laZ:G} 
+	""".format(laX=x,laY=y,laZ=z)
+	print G
+	
+	#Conversion de tipos
+	print 'Algo ' + str(x)
+	
+	print float(str(x))*3
+	#print 'x es de tipo %s' % type(x)._name_
+	print type(5)
+	print type('5')
+	
+	print "Coordenadas de la flecha\n"
+	x=input("¿Cual es la abcisa?\n")
+	y=input("¿Cual es la ordenada?\n")	
+	\end{verbatim}
+\end{frame}
+	
+\end{document}
