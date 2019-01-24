@@ -11,3 +11,5 @@ tabla = [[C,F] for C,F in zip(gradosC,gradosF)]
 print(tabla)
 
 #El programa está casi completo, solo falta agragarle el vector de direccion y un freno para el tiro horizpntal
+
+pprint(tabla)
