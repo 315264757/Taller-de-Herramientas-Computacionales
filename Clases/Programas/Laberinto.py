@@ -29,3 +29,4 @@ e = [1,0]
 r = resolver(L,e)
 import numpy as np
 print(np.matrix(L))
+

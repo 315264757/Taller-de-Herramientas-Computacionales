@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from Grados import *
-from pprint import pprint
+from pprint import pprint as rint
 
 gradosC = listaC(-5,0.5,5)
 gradosF = listaF(gradosC)
@@ -12,4 +12,4 @@ print(tabla)
 
 #El programa está casi completo, solo falta agragarle el vector de direccion y un freno para el tiro horizpntal
 
-pprint(tabla)
+rint(tabla)
