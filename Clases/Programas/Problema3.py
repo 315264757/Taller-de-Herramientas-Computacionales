@@ -46,14 +46,3 @@ print S
 #while L[len(L)-1] != 30:
 #    L.append(L[len(L)-1]+2.5)
 print S
-
-
-#Clase 11 delunes 21/01/2019 sibre listas
-def listaC(Cmin, Cmax, n):
-    gradosC = []
-    dC = (Cmax - Cmin)/float(n-1)
-    # for(i=0;i<n;i++)
-    for i in range(n):
-        C = Cmin + i*dc
-        gradosC.append(C)
-    return gradosC
