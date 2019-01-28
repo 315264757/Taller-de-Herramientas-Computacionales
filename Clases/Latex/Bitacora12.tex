@@ -1,0 +1,59 @@
+\documentclass[letterpaper, 12pt, oneside]{article} 
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\graphicspath{{Documents/THC/Clases/Latex/Imagenes/}}
+\usepackage{amssymb}
+
+\title{\Huge{Taller de Herramientas Computacionales}}
+\author{Hector Chaparro Reza}
+\date{Enero 18, 2019}
+
+\begin{document}
+	\maketitle
+	\it Esta es la bit\'acora número doce del curso intersemestral de Taller de Herramientas Computacionales, con la fecha (18/01/2019). Aqui resumir\'e lo m\'as relevante de la teor\'ia. Los problemas y las soluciones que surgieron a lo largo de la pr\'actca ser\'an comentadas en el cuerpo de la bit\'acora.\\
+	\newpage
+	
+	
+	\title{\Huge{Presentaciones en latex y formato de listas en python}}\\
+	
+	\begin{enumerate}
+		\item {Dando formato y presentaciones}
+		\begin{enumerate}
+			\item En está clase usamos el codigo de grados de la clase anerior para revisar de que manera el shell de python mostraba los datos, elementos de las listas y las listas en si. Primero vimos que al usar un for sin especificar que los elementos los queremos dentro de una lista, las listas de listas o matrices aparecerán no como listas si no como tuplas y a estas no se le pueden hacer modificaciones. También importamos de pprint una función llamada pprint para que las listas se mostrarán en forma vertical.
+			
+			\item Gran parte de la clase la dedicamos a aprender como hacer presentaciones en latex, usar el documento de clase beamer. Crear diapostitivas y darles un formato\\
+			
+			\begin{verbatim}
+			\frametitle{Diapositiva1}
+			\begin{center}
+			\includegraphics[scale=]{/home/prime/Pictures/1.png}
+			\end{center}
+			\end{frame}
+			
+			\begin{frame}[fragile]
+			\begin{verbatim}
+			G="""
+			El punto en R3 es:
+			(x,y,z)={laX:.2f},{laY:g},{laZ:G} 
+			""".format(laX=x,laY=y,laZ=z)
+			print G
+			
+			#Conversion de tipos
+			print 'Algo ' + str(x)
+			
+			print float(str(x))*3
+			#print 'x es de tipo %s' % type(x)._name_
+			print type(5)
+			print type('5')
+			
+			print "Coordenadas de la flecha\n"
+			x=input("¿Cual es la abcisa?\n")
+			y=input("¿Cual es la ordenada?\n")	
+		
+			\end{verbatim}
+			
+		
+		\end{enumerate}
+	\end{enumerate}
+\end{document}

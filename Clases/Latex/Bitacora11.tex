@@ -1,0 +1,87 @@
+\documentclass[letterpaper, 12pt, oneside]{article} 
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\graphicspath{{Documents/THC/Clases/Latex/Imagenes/}}
+\usepackage{amssymb}
+
+\title{\Huge{Taller de Herramientas Computacionales}}
+\author{Hector Chaparro Reza}
+\date{Enero 18, 2019}
+
+\begin{document}
+	\maketitle
+	\it Esta es la bit\'acora número once del curso intersemestral de Taller de Herramientas Computacionales, con la fecha (18/01/2019). Aqui resumir\'e lo m\'as relevante de la teor\'ia. Los problemas y las soluciones que surgieron a lo largo de la pr\'actca ser\'an comentadas en el cuerpo de la bit\'acora.\\
+	\newpage
+	
+	
+	\title{\Huge{Ciclos for para listas}}\\
+	
+	\begin{enumerate}
+		\item {Ejemplo11.py}
+		\begin{enumerate}
+			\item En el ejercicio usamos inputs para guardar valores en la terminal con el ciclo for, el cual es una iteración y para cada valor que generaba el ciclo con un append lo fuimos guradando en una lista creada anteriormente. También vimos ejemplos de como usar el rango, y yo lo entendi de manera que el range es el alcance del valor que ingresas por ejemplo si yo uso range de una lista, este va a ser el numero de elementos de la lista que le de a a evaluar:\\
+			
+			\begin{verbatim}
+			# !/usr/bin/python
+			# -*- coding: utf-8 -*-
+			
+			n = input("¿cuantos valores?")
+			L=[]
+			for i in range(n):
+				valor = input("Dame el valor")
+				L.append(valor)
+			
+			M=range(n)
+			for i in M:
+				valor = input("Dame el valor")
+				M[i](valor)
+			
+			N=range(n)
+			j=0
+			while j<n:
+				valor = input("Dame el valor")
+				N[i](valor)
+			
+			L=range
+			print "La lista es de tamano %d" % (len(L))
+			print L
+			
+			OtraLista = input("")
+			\end{verbatim}
+			
+			Estuvimos un rato jugando con listas metiendo y sacando datos con el ciclo for, uno que me ha sido muy util es utilizar en conjunto eun for con range y dentro de ese meter el len de la lista que me va a representar el tamaño de la lista. Después de esto utilizamos el codigo de conversión de grados centigrados a farenheit para crear un script que guardara valores en listas y en tuplas por medio del ciclo for.
+			
+			\begin{verbatim}
+			def listaC(Cmin, Cmax, n):
+				gradosC = []
+				dC = (Cmax - Cmin)/float(n-1)
+				# for(i=0;i<n;i++)
+				for i in range(n):
+					C = Cmin + i*dC
+					gradosC.append(C)
+					return gradosC
+			
+			def listaF(gradosC):
+				gradosF = []
+				for C in gradosC:
+					F = (9.0/5)* C + 32
+					gradosF.append(F)
+					return gradosF
+			
+			def mostrarListas(gradosC, gradosF):
+			#se podria usar n=(len(grados)): y en la linea de abajo usar n pero no es tan eficiente
+				for i in range(len(gradosC)):
+					C = gradosC[i]
+					F = gradosF[i]
+					print "%5.1f %5.1f" % (C, F)
+			
+			def mostrarListas1(gradosC, gradosF):
+				for C, F in zip(gradosC, gradosF):
+				print '%5d %5.1f' % (C,F)		
+			\end{verbatim}
+			
+		
+		\end{enumerate}
+	\end{enumerate}
+\end{document}
