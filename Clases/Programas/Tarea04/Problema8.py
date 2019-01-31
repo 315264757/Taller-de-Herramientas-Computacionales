@@ -14,7 +14,8 @@ beta=0.008
 
 def iteracion(h,x0,y0,n,alpha,beta):
     for i in range(0,n):    
-            x = append(x[i]-h*alpha*x[i]*y[i])
-            y = append(y[i]+h*alpha*x[i]*y[i]-h*beta*y[i])
-            z = append(1-x[i]-y[i])
+            x = __getitem__ from x0[i]-h*alpha*x[i]*y[i])
+            y = (y0[i]+h*alpha*x[i]*y[i]-h*beta*y[i])
+            z = (1-x[i]-y[i])
     return x,y,z,t
+ 
